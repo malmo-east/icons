@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/malmo-east/icons#readme",
   "scripts": {
-    "build": "./bin/build.sh",
+    "build": "chmod +x ./bin/build.sh",
     "clean": "rimraf packages/*/{tsconfig.tsbuildinfo,dist} && rimraf {dist,build}",
     "format-icons": "prettier --write \"./packages/**/*.{ts,tsx}\" --loglevel warn",
     "lint": "eslint ./scripts/ --ext .ts,.tsx",
     "cm": "git-cz",
-    "pub:ci": "./bin/publish-ci.sh",
+    "pub:ci": "chmod +x ./bin/publish-ci.sh",
     "postinstall": "node ./send-stats.js > /dev/null 2>&1 || exit 0",
     "semantic-release": "semantic-release"
   },
