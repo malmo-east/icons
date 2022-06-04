@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/malmo-east/icons#readme",
   "scripts": {
-    "build": "chmod +x ./bin/build.sh",
+    "build": "./bin/build.sh",
     "clean": "rimraf packages/*/{tsconfig.tsbuildinfo,dist} && rimraf {dist,build}",
     "format-icons": "prettier --write \"./packages/**/*.{ts,tsx}\" --loglevel warn",
     "lint": "eslint ./scripts/ --ext .ts,.tsx",
     "cm": "git-cz",
-    "pub:ci": "chmod +x ./bin/publish-ci.sh",
+    "pub:ci": "./bin/publish-ci.sh",
     "postinstall": "node ./send-stats.js > /dev/null 2>&1 || exit 0",
     "semantic-release": "semantic-release"
   },
@@ -31,6 +31,11 @@
     "@wessberg/rollup-plugin-ts": "^2.0.4"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "@rollup/plugin-auto-install": "^2.0.0",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^7.1.1",
