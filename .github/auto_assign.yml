@@ -1,0 +1,9 @@
+addReviewers: true
+
+reviewers:
+    - malmo-east
+
+skipKeywords:
+    - wip
+
+numberOfReviewers: 0

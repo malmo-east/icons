@@ -1,0 +1,10 @@
+{
+    "name": "@friday-team/icons-thin",
+    "version": "1.0.0",
+    "peerDependencies": {
+        "react": "^16.13.0 || ^17.0.1",
+        "react-dom": "^16.13.0 || ^17.0.1"
+    },
+    "main": "./index.js",
+    "module": "./esm/index.js"
+}

@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+    build:
+        name: build packages
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Install dependencies
+              run: yarn
+
+            - name: Run build
+              run: yarn build
+              env:
+                BUILD_CONCURRENCY: 5
